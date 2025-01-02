@@ -28,7 +28,7 @@
             top: 0;
             left: 6rem; /* Adjust based on your aside width */
             width: calc(100% - 6rem); /* Adjust based on your aside width */
-            z-index: 10;
+            z-index: 1;
         }
         footer {
             background-color: #2d3748;

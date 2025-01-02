@@ -21,6 +21,14 @@
         .main-content {
             flex: 1;
             margin-left: 6rem; /* Adjust based on your aside width */
+            margin-top: 4rem; /* Adjust based on your navbar height */
+        }
+        .app-nav {
+            position: fixed;
+            top: 0;
+            left: 6rem; /* Adjust based on your aside width */
+            width: calc(100% - 6rem); /* Adjust based on your aside width */
+            z-index: 10;
         }
         footer {
             background-color: #2d3748;
@@ -38,7 +46,7 @@
 <body class="bg-gray-100 text-gray-900">
     @include('layouts.aside')
     <div class="main-content">
-        <nav class="bg-white shadow p-4">
+        <nav class="app-nav bg-white shadow p-4">
             <div class="container mx-auto flex justify-between items-center">
                 <a href="/" class="flex items-center">
                     <img src="{{ asset('assets/logo.png') }}" alt="ZonaNation Logo">
@@ -62,7 +70,7 @@
                 </div>
             </div>
         </nav>
-        <main class="container mx-auto py-8">
+        <main class="container mx-auto py-8 mt-16">
             @yield('content')
         </main>
         <footer class="bg-gray-800 text-white py-4">

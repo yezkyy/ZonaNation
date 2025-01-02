@@ -29,6 +29,8 @@
         <a href="#popular-games" class="border border-black text-black py-1 px-2 w-40 rounded-full hover:bg-[#FB2576] transition">🔥Lagi Populer🔥</a>
         <a href="#game-vouchers" class="border border-black text-black py-1 px-2 w-40 rounded-full hover:bg-[#FB2576] transition">Game Mobile</a>
         <a href="#game-vouchers" class="border border-black text-black py-1 px-2 w-40 rounded-full hover:bg-[#FB2576] transition">Game PC</a>
+        <a href="#game-vouchers" class="border border-black text-black py-1 px-2 w-40 rounded-full hover:bg-[#FB2576] transition">🌟Baru Rilis🌟</a>
+        <a href="#game-vouchers" class="border border-black text-black py-1 px-2 w-40 rounded-full hover:bg-[#FB2576] transition">Voucher</a>
     </div>
 
     <!-- Popular Games Section -->

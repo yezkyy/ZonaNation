@@ -5,14 +5,17 @@
     <!-- Slider Section -->
     <div class="relative w-full mx-auto overflow-hidden">
         <div class="flex transition-transform duration-500 ease-in-out" id="promo-slider">
-            <div class="w-full flex-shrink-0">
-                <img src="{{ asset('assets/promo1.jpg') }}" alt="Promo 1" class="w-full h-64 object-cover">
+            <div class="w-1/3 flex-shrink-0 promo-slide">
+                <img src="{{ asset('assets/promo/promo1.png') }}" alt="Promo 1" class="w-full h-60 object-cover rounded-lg">
             </div>
-            <div class="w-full flex-shrink-0">
-                <img src="{{ asset('assets/promo2.jpg') }}" alt="Promo 2" class="w-full h-64 object-cover">
+            <div class="w-1/3 flex-shrink-0 promo-slide">
+                <img src="{{ asset('assets/promo/promo2.png') }}" alt="Promo 2" class="w-full h-60 object-cover rounded-lg">
             </div>
-            <div class="w-full flex-shrink-0">
-                <img src="{{ asset('assets/promo3.jpg') }}" alt="Promo 3" class="w-full h-64 object-cover">
+            <div class="w-1/3 flex-shrink-0 promo-slide">
+                <img src="{{ asset('assets/promo/promo3.png') }}" alt="Promo 3" class="w-full h-60 object-cover rounded-lg">
+            </div>
+            <div class="w-1/3 flex-shrink-0 promo-slide">
+                <img src="{{ asset('assets/promo/promo4.png') }}" alt="Promo 4" class="w-full h-60 object-cover rounded-lg">
             </div>
         </div>
         <div class="absolute inset-0 flex items-center justify-between">
@@ -26,8 +29,6 @@
         <a href="#popular-games" class="border border-black text-black py-1 px-2 w-40 rounded-full hover:bg-[#FB2576] transition">🔥Lagi Populer🔥</a>
         <a href="#game-vouchers" class="border border-black text-black py-1 px-2 w-40 rounded-full hover:bg-[#FB2576] transition">Game Mobile</a>
         <a href="#game-vouchers" class="border border-black text-black py-1 px-2 w-40 rounded-full hover:bg-[#FB2576] transition">Game PC</a>
-        <a href="#game-vouchers" class="border border-black text-black py-1 px-2 w-40 rounded-full hover:bg-[#FB2576] transition">🌟Baru Rilis🌟</a>
-        <a href="#game-vouchers" class="border border-black text-black py-1 px-2 w-40 rounded-full hover:bg-[#FB2576] transition">Voucher</a>
     </div>
 
     <!-- Popular Games Section -->
@@ -58,13 +59,26 @@
 </div>
 
 <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('#promo-slider > div');
+    let currentSlide = 1; // Start with the second slide as the center
+    const slides = document.querySelectorAll('.promo-slide');
     const totalSlides = slides.length;
+
+    function updateSlides() {
+        slides.forEach((slide, index) => {
+            slide.style.opacity = '0.5';
+            slide.style.transform = 'scale(0.8)';
+            if (index === currentSlide) {
+                slide.style.opacity = '1';
+                slide.style.transform = 'scale(1)';
+            }
+        });
+    }
 
     function showSlide(index) {
         const slider = document.getElementById('promo-slider');
-        slider.style.transform = `translateX(-${index * 100}%)`;
+        slider.style.transition = 'transform 0.5s ease-in-out';
+        slider.style.transform = `translateX(-${(index - 1) * 33.33}%)`; // Center the current slide
+        updateSlides();
     }
 
     function nextSlide() {
@@ -78,5 +92,6 @@
     }
 
     setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+    updateSlides(); // Initial update
 </script>
 @endsection

@@ -1,17 +1,21 @@
-<aside class="w-64 bg-white shadow-md h-screen fixed">
+<aside class="w-38 bg-white text-white shadow-md h-screen fixed flex flex-col justify-center items-center">
     <div class="p-4">
-        <nav class="space-y-4">
-            <a href="/" class="flex items-center text-gray-700 hover:text-blue-500 transition">
-                <i class="fas fa-home mr-3"></i> Home
+        <nav class="space-y-8">
+            <a href="/" class="flex flex-col items-center text-gray-700 hover:text-[#3F0071] transition">
+                <i class="fas fa-home text-4xl mb-1"></i>
+                <span class="text-sm">Home</span>
             </a>
-            <a href="/transaksi" class="flex items-center text-gray-700 hover:text-blue-500 transition">
-                <i class="fas fa-exchange-alt mr-3"></i> Transaksi
+            <a href="/transaksi" class="flex flex-col items-center text-gray-700 hover:text-[#3F0071] transition">
+                <i class="fas fa-exchange-alt text-4xl mb-1"></i>
+                <span class="text-sm">Transaksi</span>
             </a>
-            <a href="/promo" class="flex items-center text-gray-700 hover:text-blue-500 transition">
-                <i class="fas fa-tags mr-3"></i> Promo
+            <a href="/promo" class="flex flex-col items-center text-gray-700 hover:text-[#3F0071] transition">
+                <i class="fas fa-tags text-4xl mb-1"></i>
+                <span class="text-sm">Promo</span>
             </a>
-            <a href="/hadiahku" class="flex items-center text-gray-700 hover:text-blue-500 transition">
-                <i class="fas fa-gift mr-3"></i> Hadiahku
+            <a href="/hadiahku" class="flex flex-col items-center text-gray-700 hover:text-[#3F0071] transition">
+                <i class="fas fa-gift text-4xl mb-1"></i>
+                <span class="text-sm">Hadiahku</span>
             </a>
         </nav>
     </div>

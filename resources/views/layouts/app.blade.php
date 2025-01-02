@@ -11,28 +11,33 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            display: flex;
         }
         .flag {
             border-radius: 50%;
             width: 24px;
             height: 24px;
         }
+        .main-content {
+            flex: 1;
+            margin-left: 6rem; /* Adjust based on your aside width */
+        }
+        footer {
+            background-color: #2d3748;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
     </style>
     <script>
         function setLanguage(lang) {
-            if (lang === 'en') {
-                document.documentElement.lang = 'en';
-                alert('Language switched to English');
-            } else {
-                document.documentElement.lang = 'id';
-                alert('Language switched to Indonesian');
-            }
+            window.location.href = `/${lang}`;
         }
     </script>
 </head>
 <body class="bg-gray-100 text-gray-900">
     @include('layouts.aside')
-    <div class="ml-64">
+    <div class="main-content">
         <nav class="bg-white shadow p-4">
             <div class="container mx-auto flex justify-between items-center">
                 <a href="/" class="flex items-center">
